@@ -9,7 +9,7 @@ void main(){
     printf("Enter the elements: ");
     for(i=0;i<n;i++)
         scanf("%d",&a[i]);
-    ptr=&a;
+    ptr=a;
     
    for(i=0;i<n;ptr++){
        sum+=*ptr;
@@ -17,6 +17,7 @@ void main(){
    printf("Sum: %.2f", sum);
    mean=sum/n;
    printf("\nMean: %.2f",mean);
+   ptr=a;
    for(i=0;i<n;ptr++){
        stddev+=(pow((mean-*ptr),2));
    }
